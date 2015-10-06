@@ -46,4 +46,6 @@ for k in range(int(frequency) * 2):
     energies.append(energy)
 
 plt.plot(energies)
+plt.xlabel('Hz')
+plt.ylabel('Energy')
 plt.show()

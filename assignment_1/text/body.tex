@@ -1,41 +1,79 @@
 \section*{1.}
 \subsection*{a)}
 \begin{enumerate}
-  \item \(e^{2 \pi i (px + qy)}\)
-  \item \(e^{2 \pi i (p (x_0 + tu_1) + q (y_0 + tu_2))}\)
-  \item \(e^{2 \pi i (px_0 + ptu_1 + qy_0 + qtu_2)}\)
-  \item \(e^{2 \pi i ((px_0 + qy_0) + (pu_1 + qu_2) t)}\)
-  \item \(e^{2 \pi i (px_0 + qy_0) + 2 \pi i (pu_1 + qu_2) t}\)
-  \item \(e^{2 \pi i (px_0 + qy_0) + 2 \pi i (v_1 u_1 + v_2 u_2) t}\)
-  \item \(e^{2 \pi i (px_0 + qy_0) + 2 \pi i (v \cdot u) t}\)
-  \item \(e^{2 \pi i (px_0 + qy_0) + 2 \pi i (\norm{v} cos(\theta)) t}\)
-  \item \(e^{2 \pi i (px_0 + qy_0)} e^{2 \pi i(\norm{v} cos(\theta)) t}\)
-  \item \(A e^{2 \pi i (\norm{v} cos(\theta)) t}\)
+  \item \(f(x,y) = e^{2 \pi i (px + qy)}\)
+  \item \(g(t) = f(x(t),y(t)) = e^{2 \pi i (p (x_0 + tu_1) + q (y_0 + tu_2))}\)
+
+    Replace x with x(t) and y with y(t).
+  \item \(= e^{2 \pi i (px_0 + ptu_1 + qy_0 + qtu_2)}\)
+
+    Multiply in p and q.
+  \item \(= e^{2 \pi i ((px_0 + qy_0) + (pu_1 + qu_2) t)}\)
+
+    Group \(p x_0\) with \(q y_0\), \(p u_1\) with \(q u_2\) and move \(t\) outside.
+  \item \(= e^{2 \pi i (px_0 + qy_0) + 2 \pi i (pu_1 + qu_2) t}\)
+
+    Multiply in \(2 \pi i\)
+  \item \(= e^{2 \pi i (px_0 + qy_0) + 2 \pi i (v_1 u_1 + v_2 u_2) t}\)
+
+    \(v = (p,q)\), so replace \(q\) and \(p\) with \(v_1\) and \(v_2\) respectively.
+  \item \(= e^{2 \pi i (px_0 + qy_0) + 2 \pi i (v \cdot u) t}\)
+
+    Dot product is defined (for 2D vectors) as \(v \cdot w = v_1 w_1 + v_2 w_2\), so replace \((v_1 u_1 + v_2 u_2)\) with \((v \cdot u)\).
+  \item \(= e^{2 \pi i (px_0 + qy_0) + 2 \pi i (\norm{v} cos(\theta)) t}\)
+
+    Dot product can be expanded to \(\norm{v} \norm{u} cos(\theta)\), so replace the dot product with it. \(\norm{u} = 1\), so we can remove it from the calculation.
+  \item \(= e^{2 \pi i (px_0 + qy_0)} e^{2 \pi i(\norm{v} cos(\theta)) t}\)
+
+    Split into two exponential functions: \(e^{x + y} = e^x e^y\).
+  \item \(= A e^{2 \pi i (\norm{v} cos(\theta)) t}\)
+
+    Set \(A = e^{2 \pi i (px_0 + qy_0)}\) since, defined by the task, \say{\(A\) is some complex number that does not depend on t}.
 \end{enumerate}
 
 \subsection*{b)}
+When \(L\) is orthogonal to \(v\), \(u\) is also orthogonal to \(v\) since \(L\) has direction \(u\).
+As seen from the calculations below, if \(u\) is orthogonal to \(v\), then the angle angle between them, \(\theta\), is \(\frac{\pi}{2}\), which will result into \(0\) from \(cos(\theta)\).
+This means that the exponent ends up as \(0\), and \(e^0 = 1\).
+Only the constant \(A\) then remains.
 \begin{enumerate}
-  \item \(A e^{2 \pi i (\norm{v} cos(\theta)) t}\)
-  \item \(A e^{2 \pi i (\norm{v} cos(\frac{\pi}{2})) t}\)
-  \item \(A e^{2 \pi i (\norm{v} 0 t}\)
-  \item \(A e^{0}\)
-  \item \(A\)
+  \item \(g(t) = A e^{2 \pi i (\norm{v} cos(\theta)) t}\)
+  \item \(= A e^{2 \pi i (\norm{v} cos(\frac{\pi}{2})) t}\)
+  \item \(= A e^{2 \pi i (\norm{v} 0) t}\)
+  \item \(= A e^{0}\)
+  \item \(= A\)
 \end{enumerate}
 
 \subsection*{c)}
+
+
 \begin{enumerate}
   \item \(A e^{2 \pi i (\norm{v} cos(\theta)) t}\)
   \item \(2 \pi i (\norm{v} cos(\theta)) t\)
+
+    The exponent of \(e\) defines the frequency.
+  \item \(2 \pi i (\norm{v} cos(\theta))\)
+
+    Since the question is \say{per unit distance}, \(t = 1\) and we can remove it from the calculation.
   \item \(\norm{v} cos(\theta)\)
+
+    \(2 \pi\) is one cycle (one oscillation), so the values that are multiplied with \(2 \pi\) is the frequency. Thus we can remove \(2 \pi\)
   \item \(\sqrt{p^2 + q^2} cos(\theta)\)
+
+    \(\norm{v}\) is replaced by \(\sqrt{p^2 + q^2}\) since \(\norm{v} = \sqrt{v_1^2 + v_2^2}\) and \(v = (p,q)\). This is the frequencey in terms of \(p\), \(q\) and \(\theta\).
 \end{enumerate}
 
 \subsection*{d)}
-\(cos(\theta)\) has the maximum value of \(1\).
+The larger the exponent is, the larger the frequencey is, therefore the returned value from \(cos(\theta)\) must be as high as possible.
 \(cos\) cycles from \(1\) to \(0\) to \(-1\) to \(0\) and back to \(1\).
+From this it is obvious that \(1\) is the largest value.
+To get \(1\) from \(cos\), the input must be \(0\) or \(0 + n 2 \pi\), where \(n\) is any integer.
 This means that the value of \(\theta\) which maximizes the frequency is \(0\).
 
-How does this compare?
+While \(\theta\) from b) was \(\frac{\pi}{2}\), this time it is \(0\).
+Whit an angle of \(\frac{\pi}{2}\), \(u\) is orthogonal to \(v\).
+Whit an angle of \(0\), \(u\) is parallel to \(v\) (same direction).
+The resulting frequency from \(\theta = \frac{\pi}{2}\) will be \(0\), while it will now be the frequency defined below.
 
 In terms of p and q, the maximum frequencey is \(\sqrt{p^2 + q^2}\), calculated from the list below.
 When \(\theta\) is \(0\) (to maximize frequencey), \(cos(\theta)\) is 1, so we can eliminate it from the formula.
@@ -46,6 +84,39 @@ When \(\theta\) is \(0\) (to maximize frequencey), \(cos(\theta)\) is 1, so we c
   \item \(\sqrt{p^2 + q^2}\)
 \end{enumerate}
 
+\subsection*{e)}
+...
+
 \section*{2.}
+\subsection*{a)}
+See 2a.py for the source code.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{2a_power_spectrum}
+\caption{Power spectrum}
+\label{fig:2a}
+\end{figure}
+
+\subsection*{b)}
+See 2b.py for the source code. The calculated spectrums are exactly the same.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{2b_1}
+  \caption{x1[n]}
+  \label{fig:2b1}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{2b_2}
+  \caption{x2[n]}
+  \label{fig:2b2}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{2b_3}
+  \caption{x2[n]}
+  \label{fig:2b3}
+\end{figure}
 
 % vim: set ts=2 sw=2 expandtab:

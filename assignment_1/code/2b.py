@@ -9,7 +9,7 @@ x3 = [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0]
 
 sequences = [x1, x2, x3]
 colors = ['green', 'red', 'blue']
-linestyles = ['-', '--', ':']
+linestyles = ['-', '-', '-']
 
 for i, sequence in enumerate(sequences):
     num_samples = len(sequence)
@@ -17,7 +17,7 @@ for i, sequence in enumerate(sequences):
     magnitudes = []
     neg_two_pi = -2.0 * math.pi
 
-    for k in range(10):
+    for k in range(9):
         dft = 0.0
         neg_two_pi_k = neg_two_pi * float(k)
 
@@ -28,7 +28,8 @@ for i, sequence in enumerate(sequences):
         magnitude = abs(dft)
         magnitudes.append(magnitude)
 
-    plt.plot(magnitudes, color=colors[i], linestyle=linestyles[i], linewidth=float(len(sequences) - i) * 3.0)
-
-plt.show()
+    plt.plot(magnitudes, color=colors[i], linestyle=linestyles[i])
+    plt.xlabel('k')
+    plt.ylabel('Magnitude')
+    plt.show()
 
