@@ -29,7 +29,7 @@ for k in hz_range:
     for m in range(num_samples):
         param = neg_two_pi_k * float(m) / float(num_samples)
         ck = ck + raw_samples[m] * (math.cos(param) + 1.0j * math.sin(param))
-    ck = 1.0 / float(num_samples) * ck
+    ck = ck / float(num_samples)
     print("ck (k={}): {}".format(k, ck))
     cks.append(abs(ck))
 
