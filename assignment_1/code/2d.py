@@ -1,6 +1,3 @@
-# Written by Magnus Bjerke Vik for IMT4202 at HiG (GUC)
-# Based on http://askubuntu.com/questions/202355/how-to-play-a-fixed-frequency-sound-using-python
-
 import math
 import matplotlib.pyplot as plt
 
@@ -33,7 +30,6 @@ for k in hz_range:
         ck = ck + calc
 
     ck = ck / float(num_samples)
-    print("ck (k={}): {}".format(k, ck))
     cks.append(abs(ck))
 
 plt.plot(hz_range, cks)

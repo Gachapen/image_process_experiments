@@ -99,13 +99,12 @@ By using the answer from 2d, the wavelength of \(g(t) = f(x(t),y(t))\) will be \
 
 \section*{2.}
 \subsection*{a)}
-See 2a.py for the source code, and the figure below for the plot.
-
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{2a_power_spectrum}
 \caption{Power spectrum}
 \label{fig:2a}
 \end{figure}
+\lstinputlisting[language=Python]{../code/2a.py}
 
 \subsection*{b)}
 Calculation for \(x_1[n]\):
@@ -135,7 +134,6 @@ Calculation for \(x_1[n]\):
 \end{itemize}
 For \(x_2[n]\) and \(x_3[n]\), the 0's will cancel out the calulation of that index, meaning that they won't have any effect on the dft.
 Thus the calculated spectrums are exactly the same.
-See 2b.py for the source code, and the figures below for the plots.
 
 \begin{figure}[H]
   \centering
@@ -155,6 +153,7 @@ See 2b.py for the source code, and the figures below for the plots.
   \caption{x3[n]}
   \label{fig:2b3}
 \end{figure}
+\lstinputlisting[language=Python]{../code/2b.py}
 
 \subsection*{c)}
 \subsubsection*{i)}
@@ -210,11 +209,11 @@ The \(c_k\)'s are as follows.
 \(c = (0, -0.5i, 0, 0.5i)\)
 
 \subsubsection*{ii)}
-See 2d.py for the source code.
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{2dii}
   \caption{spectrum over [-2hz,2hz]}
   \label{fig:2dii}
 \end{figure}
+\lstinputlisting[language=Python]{../code/2d.py}
 
 % vim: set ts=2 sw=2 expandtab:

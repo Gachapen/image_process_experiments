@@ -1,5 +1,3 @@
-# Written by Magnus Bjerke Vik for IMT4202 at HiG (GUC)
-
 import math
 import cmath
 import matplotlib.pyplot as plt
