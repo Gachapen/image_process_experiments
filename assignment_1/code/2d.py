@@ -26,9 +26,12 @@ hz_range = range(min_hz, max_hz + 1)
 for k in hz_range:
     ck = 0.0
     neg_two_pi_k = neg_two_pi * float(k)
+
     for m in range(num_samples):
         param = neg_two_pi_k * float(m) / float(num_samples)
-        ck = ck + raw_samples[m] * (math.cos(param) + 1.0j * math.sin(param))
+        calc = raw_samples[m] * (math.cos(param) + 1.0j * math.sin(param))
+        ck = ck + calc
+
     ck = ck / float(num_samples)
     print("ck (k={}): {}".format(k, ck))
     cks.append(abs(ck))
