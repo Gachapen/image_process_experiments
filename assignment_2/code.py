@@ -34,7 +34,7 @@ im_dft = blockproc(im, fp.fft2)
 #imagedct.show()
 
 im_idct = blockproc(im_dct, idct2)
-image_idct = image.fromarray(im_idct)
+image_idct = Image.fromarray(im_idct)
 image_idct.show();
 
 im_idft = blockproc(im_dft, fp.ifft2)
