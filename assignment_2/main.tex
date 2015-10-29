@@ -1,0 +1,53 @@
+\documentclass[notitlepage, 11pt]{article}
+
+\usepackage[a4paper, top=3cm, bottom=4cm, left=3.75cm, right=3.75cm, head=1.2cm, foot=2cm]{geometry}
+\usepackage{cite}
+\usepackage{dirtytalk}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[toc,page]{appendix}
+
+\lstset{
+  frame=single,
+  breaklines=true,
+  postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\title{IMT4202 Assignment 2}
+\author{Magnus Bjerke Vik}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\input{body} % includes latex files from the same directory
+
+\begin{appendices}
+	\input{appendices}
+\end{appendices}
+
+\end{document}
+
+% vim: set ts=2 sw=2 expandtab:

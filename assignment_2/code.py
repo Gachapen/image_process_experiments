@@ -52,10 +52,9 @@ def compress(im, limit):
     M = im.shape[0]
     N = im.shape[1]
     selected = []
-    cleared = 0
 
-    for m in range(M):
-        for n in range(N):
+    for n in range(N):
+        for m in range(M):
             amp = abs(im[m][n])
 
             i = 0
@@ -75,14 +74,12 @@ def compress(im, limit):
                             prev_m = prev[0]
                             prev_n = prev[1]
                             im[prev_m][prev_n] = 0
-                            cleared = cleared + 1
                         selected.insert(i, (m, n))
                         finished = True
                 i = i + 1
 
             if i == limit and not finished:
                 im[m][n] = 0
-                cleared = cleared + 1
 
     return im
 
