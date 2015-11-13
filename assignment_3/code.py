@@ -59,6 +59,12 @@ def task_2():
     plt.plot(range(0, num_samples / 2), abs(signal_dft[0:num_samples/2]))
     plt.show()
 
+    window = 200
+    window_ratio = float(num_samples) / float(window)
+
+    plt.plot(np.arange(0, num_samples / 2, window_ratio), abs(np.fft.fft(sampled_signal[0:window])[0:window/2]))
+    plt.show()
+
 
 task_1()
 task_2()
