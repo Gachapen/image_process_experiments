@@ -31,7 +31,7 @@ def task_1():
     plt.plot(dft_range, abs(np.fft.fftshift(signal_dft)))
     plt.title("Signal power spectrum")
     plt.xlabel("k")
-    plt.ylabel("|X_k|")
+    plt.ylabel("|Y_k|")
     plt.show()
 
     filter_dft = np.concatenate(
