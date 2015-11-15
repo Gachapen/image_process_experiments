@@ -64,7 +64,6 @@ def task_1():
     write_wav('filtered.wav', sample_rate, filtered_signal)
 
     plt.plot(range(0, num_samples), abs(np.fft.fft(filtered_signal)))
-    # plt.xlim((-100, num_samples + 100))
     plt.title("w power spectrum")
     plt.xlabel("k")
     plt.ylabel("|W_k|")
