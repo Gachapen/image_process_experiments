@@ -91,7 +91,7 @@ def task_2():
             np.dot(dwt_haar_4, x_dwt_man_lvl1[:4]),
             x_dwt_man_lvl1[4:]
         ),
-        axis=1
+        axis=0
     )
 
     print()
