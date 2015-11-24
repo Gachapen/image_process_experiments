@@ -1,9 +1,6 @@
-import math
 import numpy as np
 import pywt
 from PIL import Image
-
-two_pi = math.pi * 2.0
 
 np.set_printoptions(
     linewidth=2000
@@ -15,9 +12,9 @@ def find_dwt_matrix(size, wavelet_type):
     matrix = np.zeros(shape=(size, size))
 
     for i in range(size // 2):
+        row_l = i
+        row_h = i + size // 2
         for j in range(wavelet.dec_len):
-            row_l = i
-            row_h = i + size // 2
             col = ((i * 2) - (wavelet.dec_len - 1 - j)) % size
 
             matrix[row_l][col] = wavelet.dec_lo[j]
@@ -56,7 +53,7 @@ def find_multilevel_dwt_matrix(size, levels, wavelet_type):
 
 def task_1():
     dwt_haar_4 = find_dwt_matrix(4, 'haar')
-    dwt_haar_8 = find_dwt_matrix(8, 'sym2')
+    dwt_haar_8 = find_dwt_matrix(8, 'haar')
     x = np.array([1.0, 2.0, 3.0, 2.0, 1.0, 3.0, 3.0, 3.0])
     x_dwt = np.dot(dwt_haar_8, x)
 
@@ -78,13 +75,24 @@ def task_1():
 
     print()
     print("DWT of x with pywt:")
-    print(pywt.dwt(x, 'sym2', mode='ppd'))
+    print(pywt.dwt(x, 'haar', mode='ppd'))
 
 
 def task_2():
     dwt_haar_8_2lvl = find_multilevel_dwt_matrix(8, 2, 'haar')
     x = np.array([1.0, 2.0, 3.0, 2.0, 1.0, 3.0, 3.0, 3.0])
     x_dwt = np.dot(dwt_haar_8_2lvl, x)
+
+    dwt_haar_4 = find_dwt_matrix(4, 'haar')
+    dwt_haar_8 = find_dwt_matrix(8, 'haar')
+    x_dwt_man_lvl1 = np.dot(dwt_haar_8, x)
+    x_dwt_man = np.concatenate(
+        (
+            np.dot(dwt_haar_4, x_dwt_man_lvl1[:4]),
+            x_dwt_man_lvl1[4:]
+        ),
+        axis=1
+    )
 
     print()
     print("2-level DWT matrix:")
@@ -97,6 +105,10 @@ def task_2():
     print()
     print("2-level DWT of x with matrix:")
     print(x_dwt)
+
+    print()
+    print("2-level DWT of x manually:")
+    print(x_dwt_man)
 
     print()
     print("2-level DWT of x with pywt:")
