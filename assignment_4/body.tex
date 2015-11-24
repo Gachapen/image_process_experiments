@@ -173,6 +173,338 @@ The visualized version of the DWT for this task can be found in Figure~\ref{fig:
   \label{fig:task3}
 \end{figure}
 
+\section*{4.}
+
+Task 3 is repeated for 2, 3, and 4 level DWT by the code in Listing~\ref{lst:task4}.
+The results are shown in Figure~\ref{fig:task4}.
+The loss in data quickly increases with each level, and thus the quality of the recovered image also drops quickly.
+
+\lstinputlisting[
+  language=Python,
+  firstline=158,
+  lastline=160,
+  label={lst:task4},
+  caption={Repeating task 3 for 2, 3 and 4 level DWT}]
+  {code.py}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/lena_2_haar}
+    \caption{2-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/lena_2_haar_dwt}
+    \caption{2-level DWT}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/lena_3_haar}
+    \caption{3-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/lena_3_haar_dwt}
+    \caption{3-level DWT}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/lena_4_haar}
+    \caption{4-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/lena_4_haar_dwt}
+    \caption{4-level DWT}
+  \end{subfigure}%
+  \caption{Lena image with 2, 3 and 4 level DWT}
+  \label{fig:task4}
+\end{figure}
+
+\section*{5.}
+
+Tasks 3 and 4 are repeated for wavelets bior2.8 (Figure~\ref{fig:task5-1}), coif3 (Figure~\ref{fig:task5-2}), db15 (Figure~\ref{fig:task5-3}), rbio3.9 (Figure~\ref{fig:task5-4}) and sym6 (Figure~\ref{fig:task5-5}) by the code in Listing~\ref{lst:task5}.
+
+\lstinputlisting[
+  language=Python,
+  firstline=163,
+  lastline=174,
+  label={lst:task5},
+  caption={Repeating task 3 and 4 for different wavelets}]
+  {code.py}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_bior2.8}}}
+    \caption{1-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_bior2.8_dwt}}}
+    \caption{1-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_bior2.8}}}
+    \caption{2-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_bior2.8_dwt}}}
+    \caption{2-level DWT}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_bior2.8}}}
+    \caption{3-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_bior2.8_dwt}}}
+    \caption{3-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_bior2.8}}}
+    \caption{4-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_bior2.8_dwt}}}
+    \caption{4-level DWT}
+  \end{subfigure}%
+  \caption{Lena image with 2, 3 and 4 level DWT using bior2.8}
+  \label{fig:task5-1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_coif3}}}
+    \caption{1-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_coif3_dwt}}}
+    \caption{1-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_coif3}}}
+    \caption{2-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_coif3_dwt}}}
+    \caption{2-level DWT}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_coif3}}}
+    \caption{3-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_coif3_dwt}}}
+    \caption{3-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_coif3}}}
+    \caption{4-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_coif3_dwt}}}
+    \caption{4-level DWT}
+  \end{subfigure}%
+  \caption{Lena image with 2, 3 and 4 level DWT using coif3}
+  \label{fig:task5-2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_db15}}}
+    \caption{1-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_db15_dwt}}}
+    \caption{1-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_db15}}}
+    \caption{2-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_db15_dwt}}}
+    \caption{2-level DWT}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_db15}}}
+    \caption{3-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_db15_dwt}}}
+    \caption{3-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_db15}}}
+    \caption{4-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_db15_dwt}}}
+    \caption{4-level DWT}
+  \end{subfigure}%
+  \caption{Lena image with 2, 3 and 4 level DWT using db15}
+  \label{fig:task5-3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_rbio3.9}}}
+    \caption{1-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_rbio3.9_dwt}}}
+    \caption{1-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_rbio3.9}}}
+    \caption{2-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_rbio3.9_dwt}}}
+    \caption{2-level DWT}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_rbio3.9}}}
+    \caption{3-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_rbio3.9_dwt}}}
+    \caption{3-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_rbio3.9}}}
+    \caption{4-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_rbio3.9_dwt}}}
+    \caption{4-level DWT}
+  \end{subfigure}%
+  \caption{Lena image with 2, 3 and 4 level DWT using rbio3.9}
+  \label{fig:task5-4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_sym6}}}
+    \caption{1-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_1_sym6_dwt}}}
+    \caption{1-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_sym6}}}
+    \caption{2-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_2_sym6_dwt}}}
+    \caption{2-level DWT}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_sym6}}}
+    \caption{3-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_3_sym6_dwt}}}
+    \caption{3-level DWT}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_sym6}}}
+    \caption{4-level DWT recovery}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{{{img/lena_4_sym6_dwt}}}
+    \caption{4-level DWT}
+  \end{subfigure}%
+  \caption{Lena image with 2, 3 and 4 level DWT using sym6}
+  \label{fig:task5-5}
+\end{figure}
+
 %\subsection*{B.}
 
 %Figure~\ref{fig:1b} displays the power spectrum of y.
